@@ -1,0 +1,59 @@
+{
+  "_comment": [
+    "Deposit metadata for the SOURCE DATA record. Upload this alongside the files, or paste",
+    "the fields into the Zenodo web form. Two fields must be completed by hand and are left",
+    "empty on purpose: 'related_identifiers' needs the code repository's own DOI, which does",
+    "not exist until that record is published, and ORCID needs your identifier. Do not invent",
+    "either.",
+    "",
+    "Zenodo will not accept the leading-underscore keys; strip _comment before use, or just",
+    "use this as a filling guide for the web form."
+  ],
+
+  "title": "Source data for: Cell-intrinsic ferroptosis defence across cancer cell lines",
+
+  "upload_type": "dataset",
+
+  "description": "<p>The 17 unmodified source files from which a pan-cancer analysis of cell-intrinsic ferroptosis defence was computed: DepMap 25Q2, the CTRPv2 PharmacoSet, Sanger Cell Model Passports, and TCGA PanCanAtlas. 5.40 GB in total.</p><p><strong>Nothing in this record is original data.</strong> Every file is redistributed unchanged under its provider's licence, so that the analysis can be re-derived from source rather than from an intermediate that has to be taken on trust. MANIFEST.csv records each file's source, version tag, URL, SHA-256, licence, and which analysis stage consumes it; SHA256SUMS allows verification with coreutils alone.</p><p><strong>This record is not required to reproduce the paper.</strong> The code repository regenerates every number and figure from committed derived objects in about three minutes. This record is needed only to re-derive those objects from source, which is an audit rather than a reproduction.</p><p>See README_DEPOSIT.md for per-provider attribution, licence terms, and usage.</p>",
+
+  "creators": [
+    {
+      "name": "Ryan, Huan",
+      "orcid": ""
+    }
+  ],
+
+  "keywords": [
+    "ferroptosis",
+    "cancer cell lines",
+    "DepMap",
+    "CTRP",
+    "TCGA",
+    "Cell Model Passports",
+    "drug sensitivity",
+    "CRISPR dependency",
+    "reproducibility"
+  ],
+
+  "license": "cc-by-4.0",
+  "_license_note": "CC BY 4.0 is the licence of the majority of the redistributed files and of this record's own metadata and documentation. It does NOT relicense the contents: each file remains under its provider's terms, listed per file in MANIFEST.csv and per provider in README_DEPOSIT.md. The Cell Model Passports files in particular are under Wellcome Sanger Institute terms, not CC BY.",
+
+  "access_right": "open",
+
+  "related_identifiers": [
+    {
+      "_fill_in": "The code repository's Zenodo DOI. Publish that record first, then add it here as 'isSupplementTo', and add this record to it as 'isSupplementedBy'. Leave empty until it exists.",
+      "identifier": "",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.7826870",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset",
+      "_note": "CTRPv2 PharmacoSet, the one included file that already has its own DOI."
+    }
+  ],
+
+  "notes": "Files are archived uncompressed on purpose. Several would compress substantially, but gzipping changes every checksum, and MANIFEST.csv would then no longer verify the bytes the analysis actually read. Filenames are flat because Zenodo records have no directories; the Holes/ and psets/ subdirectories the pipeline expects are reconstructed on download from MANIFEST.csv's subdir column."
+}
