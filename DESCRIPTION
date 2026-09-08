@@ -1,0 +1,43 @@
+Package: ferroptosisDefence
+Title: Reproducibility Materials for the Ferroptosis Defence Manuscript
+Version: 1.0.0
+Authors@R:
+    person("Huan", "Ryan", email = "huanryan@gmail.com", role = c("aut", "cre"))
+Description: Analysis code, derived data and figure production for a pan-cancer
+    study of cell-intrinsic ferroptosis defence. Regenerates every number and
+    figure in the manuscript from committed derived objects, and re-derives those
+    objects from the original DepMap, CTRP, Cell Model Passports and TCGA sources
+    when data/raw/ has been populated by data/download.R. Not an installable
+    package: this file exists to pin the dependency set. Exact versions are in
+    renv.lock and docs/package_versions.csv.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.5)
+Imports:
+    car,
+    data.table,
+    digest,
+    dplyr,
+    forcats,
+    ggplot2,
+    ggrepel,
+    lme4,
+    lmerTest,
+    metafor,
+    patchwork,
+    ppcor,
+    RLRsim,
+    scales,
+    survival,
+    tibble,
+    tidyr
+Suggests:
+    broom,
+    broom.mixed,
+    emmeans,
+    jsonlite,
+    MuMIn,
+    readr,
+    readxl,
+    renv

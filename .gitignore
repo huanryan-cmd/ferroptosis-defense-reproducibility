@@ -1,0 +1,25 @@
+# Raw source data — never committed. Fetched and checksum-verified by
+# data/download.R against data/MANIFEST.csv. Redistribution terms differ per
+# provider and some prohibit mirroring.
+data/raw/**
+!data/raw/.gitkeep
+
+# Regenerated outputs. Everything here is reproduced by run_all.R; committing it
+# would make a stale result indistinguishable from a fresh one.
+results/**
+!results/.gitkeep
+
+# renv library — renv.lock is the pin and IS committed; the library is not.
+renv/
+.Rprofile
+
+# Self-test scratch
+tests/fixtures/*.csv
+
+# R session detritus
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.DS_Store
+Thumbs.db

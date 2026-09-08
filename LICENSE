@@ -1,0 +1,38 @@
+MIT License
+
+Copyright (c) 2026 Huan Ryan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON DATA LICENSING
+
+This licence covers the CODE in this repository only.
+
+The data this analysis consumes is licensed by its original providers and is
+NOT relicensed here. No raw DepMap, CTRP, Cell Model Passports or TCGA file is
+redistributed in this repository; data/download.R fetches them from source and
+verifies each against a SHA-256 recorded in data/MANIFEST.csv, which also names
+each source's licence.
+
+Files under data/derived/ are DERIVED objects — score matrices and model
+outputs computed from those sources — not copies of the source data. They are
+committed so the analysis reproduces without a 5.5 GB download. Anyone reusing
+them remains bound by the terms of the underlying providers.
